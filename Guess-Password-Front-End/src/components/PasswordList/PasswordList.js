@@ -13,7 +13,7 @@ const PasswordList = ({lists}) => {
           <Typography variant="h2" textAlign="center" >
             Attempt #{key + 1}
           </Typography>
-          <Typography variant="p" textAlign="right" color={isCorrect ? 'green': 'red'}>
+          <Typography variant="h6" textAlign="right" color={isCorrect ? 'green': 'red'}>
             {isCorrect ? 'Right Answer': 'Wrong Answer'}
           </Typography>
           <Styled.History>

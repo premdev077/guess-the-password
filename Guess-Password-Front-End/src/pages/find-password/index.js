@@ -21,10 +21,17 @@ class FindPassword extends Component {
   state = getInitialState();
 
   async componentDidMount() {
-    const hint = await axioApi.get('new-password');
-    this.setState({
-      hint: hint.data.hint,
-    });
+    try {
+      const hint = await axioApi.get('new-password');
+      this.setState({
+        hint: hint.data.hint,
+        isServerError: false
+      });
+    } catch (e) {
+      this.setState({
+        isServerError: true
+      });
+    }
   }
 
   resetGame = async () => {
@@ -32,6 +39,7 @@ class FindPassword extends Component {
     const hint = await axioApi.get('new-password');
     this.setState({
       hint: hint.data.hint,
+      isServerError: false
     });
   }
 
@@ -94,8 +102,17 @@ class FindPassword extends Component {
       attempt,
       guess,
       attemptGuess,
-      hint
+      hint,
+      isServerError
     } = this.state;
+
+    if(isServerError) {
+      return (
+        <Typography variant="h1" textAlign="center" color={'white'} mt={150}>
+          Server error:  Please run the node server before play the game
+        </Typography>
+      );
+    }
 
     const guessList = allGuesses.map((item, index) => 
       <Styled.ListItem key={index} color={item.feedbackColor}>
@@ -116,8 +133,8 @@ class FindPassword extends Component {
         <Row mt={50}>
           <Col>
             <Styled.LandmarkContainer as="main" role="main">
-                <Feedback feedback={feedbackMessage}/>
                 <Progress attempt= { attempt } guess={guess} guessList={guessList}/>
+                <Feedback feedback={feedbackMessage}/>
                 <Typography variant="h5" textAlign="center" color={'white'} mt={50}>
                  Password Hint: {hint}
                 </Typography>
