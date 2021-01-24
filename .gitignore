@@ -1,0 +1,48 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/Guess-Password-Back-End/node_modules
+/Guess-Password-Back-End/.pnp
+/Guess-Password-Back-End/.pnp.js
+
+# testing
+/Guess-Password-Back-End/coverage
+
+# production
+/Guess-Password-Back-End/build
+
+# misc
+/Guess-Password-Back-End/.DS_Store
+/Guess-Password-Back-End/.env.local
+/Guess-Password-Back-End/.env.development.local
+/Guess-Password-Back-End/.env.test.local
+/Guess-Password-Back-End/.env.production.local
+
+/Guess-Password-Back-End/npm-debug.log*
+/Guess-Password-Back-End/yarn-debug.log*
+/Guess-Password-Back-End/yarn-error.log*
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/Guess-Password-Front-End/node_modules
+/Guess-Password-Front-End/.pnp
+/Guess-Password-Front-End/.pnp.js
+
+# testing
+/Guess-Password-Front-End/coverage
+
+# production
+/Guess-Password-Front-End/build
+
+# misc
+/Guess-Password-Front-End/.DS_Store
+/Guess-Password-Front-End/.env.local
+/Guess-Password-Front-End/.env.development.local
+/Guess-Password-Front-End/.env.test.local
+/Guess-Password-Front-End/.env.production.local
+
+/Guess-Password-Front-End/npm-debug.log*
+/Guess-Password-Front-End/yarn-debug.log*
+/Guess-Password-Front-End/yarn-error.log*

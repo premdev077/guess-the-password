@@ -1,0 +1,33 @@
+{
+  "name": "guess-the-password",
+  "version": "1.0.0",
+  "description": "guess the password project react with nodejs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js localhost 3080",
+    "build": "webpack",
+    "dev": "nodemon ./server.js localhost 3080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/premdev077/guess-the-password.git"
+  },
+  "author": "Premraj Tharmarajah",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.4",
+    "node-storage": "0.0.9"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-zip": "^5.0.1",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-stream": "^5.2.1"
+  }
+}
