@@ -1,1 +1,1 @@
-# Please change the branch to clone the project
+# Please change the branch to `Master` branch clone the project
